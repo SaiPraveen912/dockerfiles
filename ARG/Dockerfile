@@ -1,7 +1,7 @@
 ARG version
 FROM almalinux:${version:-8}
 #RUN cat /etc/*release
-ARG COURSE
-ARG TRAINER
+ARG ${COURSE:-DevOps}
+ARG ${TRAINER:-Praveen}
 RUN echo "Course is: ${COURSE}, Trainer is: ${TRAINER}"
 CMD ["cat", "/etc/*release"]
